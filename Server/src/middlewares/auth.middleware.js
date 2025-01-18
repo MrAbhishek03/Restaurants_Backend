@@ -4,6 +4,8 @@ import asyncHandler from "../utils/asyncHandler.js";
 import jwt from "jsonwebtoken"
 
 const verifyJWT=asyncHandler(async(req,res,next)=>{
+    console.log("ashu");
+    
     try {
         const token=req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ","")
         // console.log(!token)
